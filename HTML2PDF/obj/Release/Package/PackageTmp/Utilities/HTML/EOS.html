@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Generate Barcode Test page</title>
+    <!-- CSS does not work as expected in my Mac environment. -->
+    <!--<link rel="stylesheet" type="text/css" href="ldw33c.css">-->
+</head>
+
+<!--
+    This is simple table that has 3 columns and 11 rows for one page. The label sheet is
+    LDW33C that the Toyo Insatsu (東洋印刷) provides. We will create this simple
+    HTML page to convert the pages to PDF by using wkhtmltopdf.
+-->
+
+<body>
+    <!-- Write HTML just like a web page -->
+    <table>
+        <!-- Page one -->
+        <tr><td colspan="1" ></td><td align="center">End Of Set Barcode </td></tr>
+   
+        <tr>
+            <td width="220" height="185" align="center" valign="middle">
+                <img src="barcodes/barcode-eos.bmp">
+            </td>
+            <td width="220" height="185" align="center" valign="middle">
+                <img src="./barcodes/barcode-eos.bmp">
+            </td>
+            <td width="220" height="185" align="center" valign="middle">
+                <img src="./barcodes/barcode-eos.bmp">
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

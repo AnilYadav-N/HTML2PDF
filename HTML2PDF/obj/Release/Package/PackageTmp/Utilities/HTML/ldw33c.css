@@ -1,0 +1,10 @@
+/* CSS does not work as expected in my Mac enrivonment. */
+
+body {
+    margin: 0;
+}
+
+.td {
+    width: 220;
+    height: 200;
+}

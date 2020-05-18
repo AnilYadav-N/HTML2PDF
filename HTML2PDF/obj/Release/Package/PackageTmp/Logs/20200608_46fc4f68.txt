@@ -1,0 +1,48 @@
+5/8/2020 6:06:27 PM API Configuration loaded
+5/8/2020 6:06:27 PM BarcodeType:- CIF
+5/8/2020 6:06:27 PM Barcode:- 200805260002
+5/8/2020 6:06:27 PM CreateBarcode() started
+5/8/2020 6:06:27 PM CreateBarcode() Finished, Total Pages:-0
+5/8/2020 6:06:27 PM Template Name:- C:\Users\960985\Desktop\BinderHanko\HTML2PDF\HTML2PDF\\Utilities\HTML\CIF.html
+5/8/2020 6:06:27 PM Call to CreateHTML2PDF() is to be started
+5/8/2020 6:06:28 PM Call to CreateHTML2PDF() Finished
+5/8/2020 6:06:28 PM Copy file to Big Storage started
+5/8/2020 6:06:28 PM Copy file to Big Storage finished
+5/8/2020 6:06:28 PM Serialization completed, ready to send response
+5/8/2020 6:06:28 PM Result JSON:- {"ResponseMessage":"OK","ResultFilePath":"bf41253c-3dbd-4734-91ab-add48219fafd.pdf"}
+5/8/2020 6:06:52 PM API Configuration loaded
+5/8/2020 6:06:52 PM BarcodeType:- EOS
+5/8/2020 6:06:52 PM Barcode:- ND0000000064721
+5/8/2020 6:06:52 PM CreateBarcode() started
+5/8/2020 6:06:52 PM CreateBarcode() Finished, Total Pages:-0
+5/8/2020 6:06:52 PM Template Name:- C:\Users\960985\Desktop\BinderHanko\HTML2PDF\HTML2PDF\\Utilities\HTML\EOS.html
+5/8/2020 6:06:52 PM Call to CreateHTML2PDF() is to be started
+5/8/2020 6:06:52 PM Call to CreateHTML2PDF() Finished
+5/8/2020 6:06:52 PM Copy file to Big Storage started
+5/8/2020 6:06:53 PM Copy file to Big Storage finished
+5/8/2020 6:06:53 PM Serialization completed, ready to send response
+5/8/2020 6:06:53 PM Result JSON:- {"ResponseMessage":"OK","ResultFilePath":"48814d27-e248-4801-8b5a-fe1a3709401a.pdf"}
+5/8/2020 6:07:57 PM API Configuration loaded
+5/8/2020 6:07:57 PM BarcodeType:- CIF
+5/8/2020 6:07:57 PM Barcode:- 200805260002
+5/8/2020 6:07:57 PM CreateBarcode() started
+5/8/2020 6:07:57 PM CreateBarcode() Finished, Total Pages:-0
+5/8/2020 6:07:57 PM Template Name:- C:\Users\960985\Desktop\BinderHanko\HTML2PDF\HTML2PDF\\Utilities\HTML\CIF.html
+5/8/2020 6:07:57 PM Call to CreateHTML2PDF() is to be started
+5/8/2020 6:07:58 PM Call to CreateHTML2PDF() Finished
+5/8/2020 6:07:58 PM Copy file to Big Storage started
+5/8/2020 6:07:58 PM Copy file to Big Storage finished
+5/8/2020 6:07:58 PM Serialization completed, ready to send response
+5/8/2020 6:07:58 PM Result JSON:- {"ResponseMessage":"OK","ResultFilePath":"5005a55d-db22-454b-b179-ed99557f1bec.pdf"}
+5/8/2020 6:11:01 PM API Configuration loaded
+5/8/2020 6:11:01 PM BarcodeType:- CIF
+5/8/2020 6:11:01 PM Barcode:- 200805260002
+5/8/2020 6:11:01 PM CreateBarcode() started
+5/8/2020 6:11:01 PM CreateBarcode() Finished, Total Pages:-0
+5/8/2020 6:11:01 PM Template Name:- C:\Users\960985\Desktop\BinderHanko\HTML2PDF\HTML2PDF\\Utilities\HTML\CIF.html
+5/8/2020 6:11:01 PM Call to CreateHTML2PDF() is to be started
+5/8/2020 6:11:01 PM Call to CreateHTML2PDF() Finished
+5/8/2020 6:11:01 PM Copy file to Big Storage started
+5/8/2020 6:11:02 PM Copy file to Big Storage finished
+5/8/2020 6:11:02 PM Serialization completed, ready to send response
+5/8/2020 6:11:02 PM Result JSON:- {"ResponseMessage":"OK","ResultFilePath":"47c6dc8d-bd76-42de-8f30-23f618119108.pdf"}

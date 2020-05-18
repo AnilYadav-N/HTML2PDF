@@ -1,0 +1,48 @@
+5/12/2020 11:31:46 AM API Configuration loaded
+5/12/2020 11:31:46 AM BarcodeType:- EOS
+5/12/2020 11:31:46 AM Barcode:- ND0000000064721
+5/12/2020 11:31:46 AM CreateBarcode() started
+5/12/2020 11:31:46 AM CreateBarcode() Finished, Total Pages:-0
+5/12/2020 11:31:46 AM Template Name:- C:\Users\960985\Desktop\BinderHanko\HTML2PDF\HTML2PDF\\Utilities\HTML\EOS.html
+5/12/2020 11:31:46 AM Call to CreateHTML2PDF() is to be started
+5/12/2020 11:31:47 AM Call to CreateHTML2PDF() Finished
+5/12/2020 11:31:47 AM Copy file to Big Storage started
+5/12/2020 11:31:48 AM Copy file to Big Storage finished
+5/12/2020 11:31:48 AM Serialization completed, ready to send response
+5/12/2020 11:31:48 AM Result JSON:- {"ResponseMessage":"OK","ResultFilePath":"3118730b-780e-4f15-a8d2-5552721a9281.pdf"}
+5/12/2020 11:37:26 AM API Configuration loaded
+5/12/2020 11:37:26 AM BarcodeType:- EOS
+5/12/2020 11:37:26 AM Barcode:- ND0000000064721
+5/12/2020 11:37:26 AM CreateBarcode() started
+5/12/2020 11:37:26 AM CreateBarcode() Finished, Total Pages:-0
+5/12/2020 11:37:26 AM Template Name:- C:\Users\960985\Desktop\BinderHanko\HTML2PDF\HTML2PDF\\Utilities\HTML\EOS.html
+5/12/2020 11:37:26 AM Call to CreateHTML2PDF() is to be started
+5/12/2020 11:37:27 AM Call to CreateHTML2PDF() Finished
+5/12/2020 11:37:27 AM Copy file to Big Storage started
+5/12/2020 11:37:28 AM Copy file to Big Storage finished
+5/12/2020 11:37:28 AM Serialization completed, ready to send response
+5/12/2020 11:37:28 AM Result JSON:- {"ResponseMessage":"OK","ResultFilePath":"a7efa703-bd75-4ae8-8329-36b567e21f7c.pdf"}
+5/12/2020 11:43:01 AM API Configuration loaded
+5/12/2020 11:43:01 AM BarcodeType:- EOS
+5/12/2020 11:43:01 AM Barcode:- ND0000000064721
+5/12/2020 11:43:01 AM CreateBarcode() started
+5/12/2020 11:43:01 AM CreateBarcode() Finished, Total Pages:-0
+5/12/2020 11:43:01 AM Template Name:- C:\Users\960985\Desktop\BinderHanko\HTML2PDF\HTML2PDF\\Utilities\HTML\EOS.html
+5/12/2020 11:43:01 AM Call to CreateHTML2PDF() is to be started
+5/12/2020 11:43:02 AM Call to CreateHTML2PDF() Finished
+5/12/2020 11:43:02 AM Copy file to Big Storage started
+5/12/2020 11:43:02 AM Copy file to Big Storage finished
+5/12/2020 11:43:02 AM Serialization completed, ready to send response
+5/12/2020 11:43:02 AM Result JSON:- {"ResponseMessage":"OK","ResultFilePath":"c4a95c34-5e72-4d13-bc60-da880861ce18.pdf"}
+5/12/2020 11:47:39 AM API Configuration loaded
+5/12/2020 11:47:39 AM BarcodeType:- EOS
+5/12/2020 11:47:39 AM Barcode:- ND0000000064721
+5/12/2020 11:47:39 AM CreateBarcode() started
+5/12/2020 11:47:39 AM CreateBarcode() Finished, Total Pages:-0
+5/12/2020 11:47:39 AM Template Name:- C:\Users\960985\Desktop\BinderHanko\HTML2PDF\HTML2PDF\\Utilities\HTML\EOS.html
+5/12/2020 11:47:39 AM Call to CreateHTML2PDF() is to be started
+5/12/2020 11:47:39 AM Call to CreateHTML2PDF() Finished
+5/12/2020 11:47:39 AM Copy file to Big Storage started
+5/12/2020 11:47:40 AM Copy file to Big Storage finished
+5/12/2020 11:47:40 AM Serialization completed, ready to send response
+5/12/2020 11:47:40 AM Result JSON:- {"ResponseMessage":"OK","ResultFilePath":"37a5e3a1-a18f-4904-8a5e-f7ee651b671b.pdf"}

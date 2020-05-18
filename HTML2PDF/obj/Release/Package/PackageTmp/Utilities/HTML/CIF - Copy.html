@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+</head>
+<body id="PrintBoxWindowPage">
+    <div class="print-button" id="dvPrintbutton">
+        <button type="button" class="btn btn-primary" style="width: 130px" id="btnPrintBinder">
+            <label id="lblPrintBinder">Print</label>
+        </button>
+    </div>
+    <h1>EBinder</h1>
+    <div id="main" style="margin-top:15px;">
+        <form id="PrintBoxWindow" role="form" class="form-horizontal" runat="server">
+            <div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div id="barcodediv" class="col-xs-12" align="left">
+                            EBinder Start
+                        </div>
+                        <div id="tdValue" class="col-xs-12" style="margin-left:20px;margin-top:10px;">
+                            <img src="./barcodes/barcode-CIFBarcode.bmp">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <div class="panel panel-primary" style="margin-top:30px;">
+                <div class="panel-heading swlang fntnosize">
+                    <label id="lblHeadingBinderInfo">Binder Information</label>
+                </div>
+                <div class="panel-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="form-group">
+                                <label id="lblBinderIndexNo" class="col-xs-6" for="lblIndexNo">
+                                    BinderIndex Number :
+                                </label>
+                                <label class="col-xs-6" id="lblIndexNo">
+                                    <img src="./barcodes/barcode-CIF1.bmp">
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label id="lblBinderSubjects" class="col-xs-6" for="lblbinderSub">
+                                    Binder Subject :
+                                </label>
+                                <label class="col-xs-6" id="lblbinderSub">
+                                    <img src="./barcodes/barcode-CIF2.bmp">
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label id="lblCompanyNameEng" class="col-xs-6" for="lblCompNameEng">
+                                    Company Name(English) :
+                                </label>
+                                <label class="col-xs-6" id="lblCompNameEng">
+                                    <img src="./barcodes/barcode-CIF3.bmp">
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label id="lblCompanyNameJap" class="col-xs-6" for="lblCompNameJP">
+                                    Company Name(Japanese) :
+                                </label>
+                                <label class="col-xs-6" id="lblCompNameJP">
+                                    <img src="./barcodes/barcode-CIF4.bmp">
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label id="lblCIFNo" class="col-xs-6" for="lblCIFNUMBER">
+                                    CIF Number :
+                                </label>
+                                <label class="col-xs-6" id="lblCIFNUMBER">
+                                    <img src="./barcodes/barcode-CIF5.bmp">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br />
+            <br />
+            <div>
+                <div class="panel-body" style="margin-top:30px;">
+                    <div>
+                        <div class="row" align="Right">
+                            <div id="barcodediv2" class="col-xs-12" align="right">
+                                EBinder Start
+                            </div>
+                            <div id="tdValue2" class="col-xs-12" style="margin-top:10px;">
+                                <img src="./barcodes/barcode-CIFBarcode.bmp">
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="panel-body" style="margin-top:30px;">
+                <ol>
+                    <li> Place the <strong>Cover Page</strong> at the beginning of your documents as the first page of a Binder. </li>
+                    <li> Place the <strong>End Set Page</strong> at the end of your documents as the last page of a Binder. </li>
+                </ol>
+            </div>
+            <br />
+            <div id="dvclose" class="row pull-right">
+                <button type="button" class="btn btn-default" onclick="window.close();" style="width: 130px" id="btnclose">
+                    <label id="lblClose">Close</label>
+                </button>
+            </div>
+        </form>
+
+    </div>
+
+
+
+</body>
+</html>
