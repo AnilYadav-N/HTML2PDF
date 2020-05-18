@@ -61,8 +61,18 @@ namespace HTML2PDF.Controllers
                 objBarcode.BarcodeType = objBarcodeRequest.BarcodeType;
                 objBarcode.CIFInformation = objBarcodeRequest.CIFInformation;
 
+                objBarcode.BarcodePerPage = true;
+                int pageno=1;
+
                 LogRequestData(logFileName, DateTime.Now + " CreateBarcode() started");
-                int pageno = objBarcode.CreateBarcode(objBarcodeRequest.BarcodeString, objBarcodeRequest.BarcodeHeader);
+                if (objBarcode.BarcodePerPage)
+                {
+                    pageno = objBarcode.CreateBarcode(objBarcodeRequest.BarcodeString);
+                }
+                else
+                {
+                    pageno = objBarcode.CreateBarcode(objBarcodeRequest.BarcodeString, objBarcodeRequest.BarcodeHeader);
+                }
                 LogRequestData(logFileName, DateTime.Now + " CreateBarcode() Finished," + " Total Pages:-" + pageno);
 
                 string strHTMLTemplate = "";

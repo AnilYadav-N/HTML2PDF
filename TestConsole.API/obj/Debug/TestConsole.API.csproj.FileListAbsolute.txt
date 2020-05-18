@@ -1,0 +1,14 @@
+C:\Users\960985\Desktop\BinderHanko\HTML2PDF\TestConsole.API\bin\Debug\TestConsole.API.exe.config
+C:\Users\960985\Desktop\BinderHanko\HTML2PDF\TestConsole.API\bin\Debug\TestConsole.API.exe
+C:\Users\960985\Desktop\BinderHanko\HTML2PDF\TestConsole.API\bin\Debug\TestConsole.API.pdb
+C:\Users\960985\Desktop\BinderHanko\HTML2PDF\TestConsole.API\obj\Debug\TestConsole.API.csproj.CoreCompileInputs.cache
+C:\Users\960985\Desktop\BinderHanko\HTML2PDF\TestConsole.API\obj\Debug\TestConsole.API.exe
+C:\Users\960985\Desktop\BinderHanko\HTML2PDF\TestConsole.API\obj\Debug\TestConsole.API.pdb
+C:\Users\960985\Desktop\BinderHanko\HTML2PDF\TestConsole.API\obj\Debug\TestConsole.API.csprojAssemblyReference.cache
+D:\Nucleus\GIT\HTML2PDFF\TestConsole.API\bin\Debug\TestConsole.API.exe.config
+D:\Nucleus\GIT\HTML2PDFF\TestConsole.API\bin\Debug\TestConsole.API.exe
+D:\Nucleus\GIT\HTML2PDFF\TestConsole.API\bin\Debug\TestConsole.API.pdb
+D:\Nucleus\GIT\HTML2PDFF\TestConsole.API\obj\Debug\TestConsole.API.csprojAssemblyReference.cache
+D:\Nucleus\GIT\HTML2PDFF\TestConsole.API\obj\Debug\TestConsole.API.csproj.CoreCompileInputs.cache
+D:\Nucleus\GIT\HTML2PDFF\TestConsole.API\obj\Debug\TestConsole.API.exe
+D:\Nucleus\GIT\HTML2PDFF\TestConsole.API\obj\Debug\TestConsole.API.pdb

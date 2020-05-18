@@ -29,7 +29,45 @@ namespace HTML2PDF.Models
             return isValid;
         }
 
-        public int CreateBarcode(string strBarcode, string strBarcodeHeader)
+        public int CreateBarcode(string strBarcode) { 
+
+            //initiate BarcodeWriter
+            var barcodeWriter = new BarcodeWriter();
+            //set barcode format
+            barcodeWriter.Format = BarcodeFormat.CODE_128;
+            int PageNo = 0;
+            string imagefile = null;
+
+            imagefile = AppDomain.CurrentDomain.BaseDirectory + @"\Utilities\HTML\Barcodes\barcode-";
+
+            // Taking a string 
+            String str = strBarcode;
+
+            char[] spearator = { ',' };
+
+            String[] strlist = str.Split(spearator, StringSplitOptions.None);
+            int totalBarcode = strlist.Count() - 1;// removed last comma ,
+            PageNo = totalBarcode ;
+
+            int i = 1;
+            //to create barcode images in template
+            foreach (String s in strlist)
+            {
+                if (string.IsNullOrWhiteSpace(s) && string.IsNullOrWhiteSpace(s))
+                { }
+                else
+                {
+                    barcodeWriter
+                    .Write(s)
+                    .Save(imagefile + i + ".bmp");
+
+                    i = i +33;
+                }
+            }
+
+            return PageNo;
+        }
+            public int CreateBarcode(string strBarcode, string strBarcodeHeader)
         {
             //initiate BarcodeWriter
             var barcodeWriter = new BarcodeWriter();

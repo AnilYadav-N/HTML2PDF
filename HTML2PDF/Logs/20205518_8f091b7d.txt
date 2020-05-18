@@ -1,0 +1,9 @@
+5/18/2020 5:56:48 PMWeb API Request Exception:- Process must exit before requested information can be determined.
+5/18/2020 5:57:07 PM API Configuration loaded
+5/18/2020 5:57:07 PM BarcodeType:- TXN
+5/18/2020 5:57:07 PM Barcode:- IS20200422,IS20200423,IS20200424,
+5/18/2020 5:57:07 PM CreateBarcode() started
+5/18/2020 5:57:09 PM CreateBarcode() Finished, Total Pages:-3
+5/18/2020 5:57:10 PM Template Name:- D:\Nucleus\GIT\HTML2PDFF\HTML2PDF\\Utilities\HTML\TXN3.html
+5/18/2020 5:57:10 PM Call to CreateHTML2PDF() is to be started
+5/18/2020 5:58:10 PMWeb API Request Exception:- Process must exit before requested information can be determined.
