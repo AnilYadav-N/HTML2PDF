@@ -341,3 +341,4 @@ D:\Nucleus\GIT\HTML2PDFF\HTML2PDF\obj\Debug\HTML2PDF.csproj.CoreCompileInputs.ca
 D:\Nucleus\GIT\HTML2PDFF\HTML2PDF\obj\Debug\HTML2PDF.csproj.CopyComplete
 D:\Nucleus\GIT\HTML2PDFF\HTML2PDF\obj\Debug\HTML2PDF.dll
 D:\Nucleus\GIT\HTML2PDFF\HTML2PDF\obj\Debug\HTML2PDF.pdb
+D:\Nucleus\GIT\HTML2PDFF\HTML2PDF\obj\Debug\HTML2PDF.csprojAssemblyReference.cache

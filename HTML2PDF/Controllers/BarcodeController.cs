@@ -111,7 +111,7 @@ namespace HTML2PDF.Controllers
             }
 
 
-            APIResponse objresponse = new APIResponse();
+            ApiResponse objresponse = new ApiResponse();
             objresponse.ResultFilePath = strResult;
             if (string.IsNullOrWhiteSpace(strResult))
                 objresponse.ResponseMessage = "NG";
@@ -129,37 +129,7 @@ namespace HTML2PDF.Controllers
 
         }
 
-        /*
-        public JsonResult Post([FromBody] BarcodeRequest objBarcodeRequest)
-        {
-            JsonResult jr = new JsonResult();
-            string _res = "";
-            try
-            {
-                _res = "ok";
-                   
-                if (_res == "ok")
-                    jr.Data = "Valid";
-                else
-                    jr.Data = "Not Valid";
-                jr.ContentType = "JSON";
-                jr.ContentEncoding = System.Text.Encoding.UTF8;
-            }
-            catch (Exception ex)
-            {
-                //Common.Controllers.ErrorLogging.FetchErrorData(ex);
-                //Response.Write(ex.Message);
-                jr.Data = "Error";
-            }
-            finally
-            {
-
-            }
-            jr.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
-            return jr;
-        }
-        */
-
+       
         // PUT: api/Barcode/5
         public void Put(int id, [FromBody]string value)
         {
