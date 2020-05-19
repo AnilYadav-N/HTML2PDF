@@ -21,10 +21,6 @@ namespace HTML2PDF.Controllers
         // GET: api/Barcode/5
         public string Get(int id)
         {
-            //BarcodeRequest obj = new BarcodeRequest();
-            //obj.BarcodeType = "APP";
-            //obj.CreateBarcode("NOAH-HL,IS2020042200005,IS2020042200006,IS2020042200007");
-
             return "value";
         }
 
@@ -32,10 +28,7 @@ namespace HTML2PDF.Controllers
 
         public string Post([FromBody] BarcodeRequest objBarcodeRequest)
         {
-            //BarcodeRequest obj = new BarcodeRequest();
-            //obj.BarcodeType = "APP";
-            //obj.CreateBarcode("IS2020042200004,IS2020042200005,IS2020042200006,IS2020042200007");
-
+           
             LoadSettingsFromConfig();
             LogRequestData(logFileName, DateTime.Now + " API Configuration loaded");
 

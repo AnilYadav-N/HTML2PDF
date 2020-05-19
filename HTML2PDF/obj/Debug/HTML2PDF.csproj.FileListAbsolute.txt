@@ -337,7 +337,6 @@ D:\Nucleus\GIT\HTML2PDFF\HTML2PDF\bin\Antlr3.Runtime.pdb
 D:\Nucleus\GIT\HTML2PDFF\HTML2PDF\bin\System.Diagnostics.DiagnosticSource.xml
 D:\Nucleus\GIT\HTML2PDFF\HTML2PDF\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 D:\Nucleus\GIT\HTML2PDFF\HTML2PDF\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Nucleus\GIT\HTML2PDFF\HTML2PDF\obj\Debug\HTML2PDF.csprojAssemblyReference.cache
 D:\Nucleus\GIT\HTML2PDFF\HTML2PDF\obj\Debug\HTML2PDF.csproj.CoreCompileInputs.cache
 D:\Nucleus\GIT\HTML2PDFF\HTML2PDF\obj\Debug\HTML2PDF.csproj.CopyComplete
 D:\Nucleus\GIT\HTML2PDFF\HTML2PDF\obj\Debug\HTML2PDF.dll

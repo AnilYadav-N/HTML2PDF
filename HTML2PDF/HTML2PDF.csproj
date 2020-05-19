@@ -174,7 +174,6 @@
     <Compile Include="Common\APIConfiguration.cs" />
     <Compile Include="Controllers\BarcodeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PDFController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -184,7 +183,6 @@
     </Compile>
     <Compile Include="Models\APIResponse.cs" />
     <Compile Include="Models\BarcodeRequest.cs" />
-    <Compile Include="Models\PDFRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

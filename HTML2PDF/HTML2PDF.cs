@@ -150,7 +150,7 @@ namespace HTML2PDF
             catch (Exception ex)
             {
                 //Console.WriteLine(ex.ToString());
-                throw;
+                //throw;
             }
 
             return strHTMLfile;

@@ -53,8 +53,10 @@ namespace HTML2PDF.Models
             //to create barcode images in template
             foreach (String s in strlist)
             {
-                if (string.IsNullOrWhiteSpace(s) && string.IsNullOrWhiteSpace(s))
-                { }
+                if (string.IsNullOrWhiteSpace(s) )
+                {
+                    //do nothing
+                }
                 else
                 {
                     barcodeWriter
@@ -99,8 +101,10 @@ namespace HTML2PDF.Models
                 //to create barcode images in template
                 foreach (String s in strlist)
                 {
-                    if (string.IsNullOrWhiteSpace(s) && string.IsNullOrWhiteSpace(s))
-                    { }
+                    if (string.IsNullOrWhiteSpace(s) )
+                    {
+                    //do nothing
+                    }
                     else
                     {
 
@@ -153,12 +157,6 @@ namespace HTML2PDF.Models
                     i++;
                 }
 
-                //string strBinderInfo = "BinderIndex Number :"+"\n";
-                //strBinderInfo = strBinderInfo + "Binder Subject :" + "\n";
-                //strBinderInfo = strBinderInfo + "Company Name(English) :" + "\n";
-                //strBinderInfo = strBinderInfo + "Company Name(Japanese) :" + "\n";
-                //strBinderInfo = strBinderInfo + "Company Number :" + "\n";
-
 
             }
 
@@ -167,7 +165,6 @@ namespace HTML2PDF.Models
 
         protected string CreateHeaderFile(string strFileContents, string strFileName)
         {
-            //string strfile = @"C:\Users\960985\Desktop\BinderHanko\HTML2PDF\HTML2PDF\Utilities\HTML\Barcodes\barcode-Header.bmp";
             string strfile = AppDomain.CurrentDomain.BaseDirectory + @"Utilities\HTML\Barcodes\barcode-Header.bmp";
 
             if (strFileName.Length > 1) { strfile = strFileName; }
