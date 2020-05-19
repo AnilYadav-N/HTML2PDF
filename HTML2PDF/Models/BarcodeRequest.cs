@@ -22,10 +22,10 @@ namespace HTML2PDF.Models
         {
             bool isValid = true;
 
-            //if (string.IsNullOrWhiteSpace(HTMLURL) && string.IsNullOrWhiteSpace(HTMLContents))
-            //{
-            //    isValid = false;
-            //}
+            if (string.IsNullOrWhiteSpace(BarcodeString) && string.IsNullOrWhiteSpace(BarcodeType))
+            {
+                isValid = false;
+            }
             return isValid;
         }
 

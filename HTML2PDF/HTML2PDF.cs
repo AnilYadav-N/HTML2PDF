@@ -21,37 +21,12 @@ namespace HTML2PDF
             if (!string.IsNullOrEmpty(strfileNamePDF))
             {
                 string file = Server.MapPath("~\\utilities\\GeneratedPDFs\\" + strfileNamePDF);
-                //if (File.Exists(file))
-                //    // strfileNamePDF = file;
-                //    File.Copy(file, @"\\SSOST8768\BarcodePDF$\"+ strfileNamePDF);
+                
             }
 
             return strfileNamePDF;
 
-            //if (!string.IsNullOrEmpty(fileName))
-            //{
-            //    string file = Server.MapPath("~\\utilities\\GeneratedPDFs\\" + fileName);
-            //    if (File.Exists(file))
-            //    {
-            //        var openFile = File.OpenRead(file);
-            //        // copy the stream (thanks to http://stackoverflow.com/questions/230128/best-way-to-copy-between-two-stream-instances-c)
-            //        byte[] buffer = new byte[32768];
-            //        while (true)
-            //        {
-            //            int read = openFile.Read(buffer, 0, buffer.Length);
-            //            if (read <= 0)
-            //            {
-            //                break;
-            //            }
-            //            Response.OutputStream.Write(buffer, 0, read);
-            //        }
-            //        openFile.Close();
-            //        openFile.Dispose();
-
-            //        File.Delete(file);
-            //    }
-            //}
-
+            
         }
 
         public string WKHtmlToPdf(string Url)
@@ -123,7 +98,6 @@ namespace HTML2PDF
         protected string CreateHTMLFile(string strHTMLContents)
         {
 
-            //string path = @"C:\Users\960985\Desktop\BinderHanko\HTML2PDF\HTML2PDF\Utilities\HTML\MyTest.html";
             string strHTMLfile = Server.MapPath("~\\utilities\\HTML\\" + Guid.NewGuid().ToString() + ".html");
 
             try
@@ -149,8 +123,7 @@ namespace HTML2PDF
 
             catch (Exception ex)
             {
-                //Console.WriteLine(ex.ToString());
-                //throw;
+                throw;
             }
 
             return strHTMLfile;
