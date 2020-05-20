@@ -28,7 +28,7 @@ namespace HTML2PDF.Controllers
 
         public string Post([FromBody] BarcodeRequest objBarcodeRequest)
         {
-           
+
             LoadSettingsFromConfig();
             LogRequestData(logFileName, DateTime.Now + " API Configuration loaded");
 
@@ -55,7 +55,7 @@ namespace HTML2PDF.Controllers
                 objBarcode.CIFInformation = objBarcodeRequest.CIFInformation;
 
                 objBarcode.BarcodePerPage = true;
-                int pageno=1;
+                int pageno = 1;
 
                 LogRequestData(logFileName, DateTime.Now + " CreateBarcode() started");
                 if (objBarcode.BarcodePerPage)
@@ -129,11 +129,11 @@ namespace HTML2PDF.Controllers
 
         }
 
-       
+
         // PUT: api/Barcode/5
         public void Put(int id, [FromBody]string value)
         {
-            
+
         }
 
         // DELETE: api/Barcode/5

@@ -6,7 +6,7 @@
 
         public string ResultFilePath { get; set; }
 
-       
+
     }
 
     public class ApiResponseMessage

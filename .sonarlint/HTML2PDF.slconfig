@@ -1,0 +1,15 @@
+{
+  "ServerUri": "https://sonarcloud.io/",
+  "Organization": {
+    "Key": "anilyadav-n",
+    "Name": "AnilYadav-N"
+  },
+  "ProjectKey": "AnilYadav-N_HTML2PDF",
+  "ProjectName": "HTML2PDF",
+  "Profiles": {
+    "CSharp": {
+      "ProfileKey": "AXIsOwQfhoTyWyVSBqnU",
+      "ProfileTimestamp": "2020-05-19T09:19:25Z"
+    }
+  }
+}

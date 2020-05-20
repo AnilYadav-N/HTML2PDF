@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Web.Http;
 
 namespace HTML2PDF.Controllers
@@ -21,13 +20,13 @@ namespace HTML2PDF.Controllers
         // POST api/values
         public void Post([FromBody]string value)
         {
-            throw;
+
         }
 
         // PUT api/values/5
         public void Put(int id, [FromBody]string value)
         {
-         
+
         }
 
         // DELETE api/values/5

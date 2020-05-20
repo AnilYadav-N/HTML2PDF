@@ -29,7 +29,8 @@ namespace HTML2PDF.Models
             return isValid;
         }
 
-        public int CreateBarcode(string strBarcode) { 
+        public int CreateBarcode(string strBarcode)
+        {
 
             //initiate BarcodeWriter
             var barcodeWriter = new BarcodeWriter();
@@ -47,13 +48,13 @@ namespace HTML2PDF.Models
 
             String[] strlist = str.Split(spearator, StringSplitOptions.None);
             int totalBarcode = strlist.Count() - 1;// removed last comma ,
-            PageNo = totalBarcode ;
+            PageNo = totalBarcode;
 
             int i = 1;
             //to create barcode images in template
             foreach (String s in strlist)
             {
-                if (string.IsNullOrWhiteSpace(s) )
+                if (string.IsNullOrWhiteSpace(s))
                 {
                     //do nothing
                 }
@@ -63,13 +64,13 @@ namespace HTML2PDF.Models
                     .Write(s)
                     .Save(imagefile + i + ".bmp");
 
-                    i = i +33;
+                    i = i + 33;
                 }
             }
 
             return PageNo;
         }
-            public int CreateBarcode(string strBarcode, string strBarcodeHeader)
+        public int CreateBarcode(string strBarcode, string strBarcodeHeader)
         {
             //initiate BarcodeWriter
             var barcodeWriter = new BarcodeWriter();
@@ -101,9 +102,9 @@ namespace HTML2PDF.Models
                 //to create barcode images in template
                 foreach (String s in strlist)
                 {
-                    if (string.IsNullOrWhiteSpace(s) )
+                    if (string.IsNullOrWhiteSpace(s))
                     {
-                    //do nothing
+                        //do nothing
                     }
                     else
                     {

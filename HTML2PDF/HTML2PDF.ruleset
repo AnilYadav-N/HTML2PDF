@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="SonarQube - HTML2PDF Sonar way Test c#" ToolsVersion="16.0">
+  <Include Path="..\.sonarlint\anilyadav-n_html2pdfcsharp.ruleset" Action="Default" />
+</RuleSet>
