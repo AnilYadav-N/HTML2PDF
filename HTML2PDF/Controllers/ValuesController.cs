@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Web.Http;
 
 namespace HTML2PDF.Controllers
@@ -31,6 +32,7 @@ namespace HTML2PDF.Controllers
         // DELETE api/values/5
         public void Delete(int id)
         {
+            throw;
         }
     }
 }
