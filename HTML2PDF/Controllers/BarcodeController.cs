@@ -133,6 +133,7 @@ namespace HTML2PDF.Controllers
         // PUT: api/Barcode/5
         public void Put(int id, [FromBody]string value)
         {
+            
         }
 
         // DELETE: api/Barcode/5
