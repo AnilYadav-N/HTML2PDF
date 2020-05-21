@@ -1,7 +1,13 @@
-﻿using HTML2PDF.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Web.Http;
+
+using HTML2PDF.Models;
+using System.Runtime.Serialization.Json;
+using System.Web.Mvc;
 
 namespace HTML2PDF.Controllers
 {
@@ -21,13 +27,20 @@ namespace HTML2PDF.Controllers
         // GET: api/Barcode/5
         public string Get(int id)
         {
+            //BarcodeRequest obj = new BarcodeRequest();
+            //obj.BarcodeType = "APP";
+            //obj.CreateBarcode("NOAH-HL,IS2020042200005,IS2020042200006,IS2020042200007");
+
             return "value";
         }
 
         // POST: api/Barcode
-
+        
         public string Post([FromBody] BarcodeRequest objBarcodeRequest)
         {
+            //BarcodeRequest obj = new BarcodeRequest();
+            //obj.BarcodeType = "APP";
+            //obj.CreateBarcode("IS2020042200004,IS2020042200005,IS2020042200006,IS2020042200007");
 
             LoadSettingsFromConfig();
             LogRequestData(logFileName, DateTime.Now + " API Configuration loaded");
@@ -47,51 +60,41 @@ namespace HTML2PDF.Controllers
                     LogRequestData(logFileName, DateTime.Now + " Web API Request Exception:- Bad Request(Invalid)");
                     return "Web API Request Exception:- Bad Request(Invalid)";
                 }
-                LogRequestData(logFileName, DateTime.Now + " BarcodeType:- " + objBarcodeRequest.BarcodeType);
+                LogRequestData(logFileName, DateTime.Now + " BarcodeType:- "+ objBarcodeRequest.BarcodeType);
                 LogRequestData(logFileName, DateTime.Now + " Barcode:- " + objBarcodeRequest.BarcodeString);
 
                 BarcodeRequest objBarcode = new BarcodeRequest();
-                objBarcode.BarcodeType = objBarcodeRequest.BarcodeType;
+                objBarcode.BarcodeType= objBarcodeRequest.BarcodeType;
                 objBarcode.CIFInformation = objBarcodeRequest.CIFInformation;
-
-                objBarcode.BarcodePerPage = true;
-                int pageno = 1;
-
+              
                 LogRequestData(logFileName, DateTime.Now + " CreateBarcode() started");
-                if (objBarcode.BarcodePerPage)
-                {
-                    pageno = objBarcode.CreateBarcode(objBarcodeRequest.BarcodeString);
-                }
-                else
-                {
-                    pageno = objBarcode.CreateBarcode(objBarcodeRequest.BarcodeString, objBarcodeRequest.BarcodeHeader);
-                }
-                LogRequestData(logFileName, DateTime.Now + " CreateBarcode() Finished," + " Total Pages:-" + pageno);
+                int pageno = objBarcode.CreateBarcode(objBarcodeRequest.BarcodeString, objBarcodeRequest.BarcodeHeader);
+                LogRequestData(logFileName, DateTime.Now + " CreateBarcode() Finished,"+ " Total Pages:-" + pageno);
 
                 string strHTMLTemplate = "";
 
                 if (objBarcode.BarcodeType.ToUpper() == "TXN")
-                    strHTMLTemplate = AppDomain.CurrentDomain.BaseDirectory + @"\Utilities\HTML\" + objBarcode.BarcodeType + pageno + ".html";
+                    strHTMLTemplate = AppDomain.CurrentDomain.BaseDirectory +  @"\Utilities\HTML\" + objBarcode.BarcodeType + pageno +".html";
                 else if (objBarcode.BarcodeType.ToUpper() == "EOS")
                     strHTMLTemplate = AppDomain.CurrentDomain.BaseDirectory + @"\Utilities\HTML\" + objBarcode.BarcodeType + ".html";
                 else if (objBarcode.BarcodeType.ToUpper() == "APP" || objBarcode.BarcodeType.ToUpper() == "DOC")
                     strHTMLTemplate = AppDomain.CurrentDomain.BaseDirectory + @"\Utilities\HTML\DOC.html";
-                else if (objBarcode.BarcodeType.ToUpper() == "CIF")
+                else if (objBarcode.BarcodeType.ToUpper() == "CIF" )
                     strHTMLTemplate = AppDomain.CurrentDomain.BaseDirectory + @"\Utilities\HTML\CIF.html";
 
 
-                LogRequestData(logFileName, DateTime.Now + " Template Name:- " + strHTMLTemplate);
+                LogRequestData(logFileName, DateTime.Now + " Template Name:- "+ strHTMLTemplate);
 
                 //Make request to create PDF from selected HTML template
                 LogRequestData(logFileName, DateTime.Now + " Call to CreateHTML2PDF() is to be started");
-                HTML2PDF objPDFRequest = new HTML2PDF();
-                string fileName = objPDFRequest.CreateHTML2PDF(strHTMLTemplate, "", "");
+                Html2Pdf objPDFRequest = new Html2Pdf();                
+                string fileName = objPDFRequest.CreateHTML2PDF(strHTMLTemplate, "","");
                 strResult = fileName;
 
                 LogRequestData(logFileName, DateTime.Now + " Call to CreateHTML2PDF() Finished");
                 if (!string.IsNullOrEmpty(fileName))
                 {
-                    string file = AppDomain.CurrentDomain.BaseDirectory + @"\Utilities\GeneratedPDFs\" + fileName;
+                     string file = AppDomain.CurrentDomain.BaseDirectory + @"\Utilities\GeneratedPDFs\"+ fileName;
 
                     if (System.IO.File.Exists(file))
                     {
@@ -110,14 +113,14 @@ namespace HTML2PDF.Controllers
                 return "Web API Request Exception:- " + ex.Message;
             }
 
-
+           
             ApiResponse objresponse = new ApiResponse();
             objresponse.ResultFilePath = strResult;
             if (string.IsNullOrWhiteSpace(strResult))
                 objresponse.ResponseMessage = "NG";
             else
                 objresponse.ResponseMessage = "OK";
-
+            
             System.Web.Script.Serialization.JavaScriptSerializer js = new System.Web.Script.Serialization.JavaScriptSerializer();
             var strResultJSON = js.Serialize(objresponse);
 
@@ -128,12 +131,41 @@ namespace HTML2PDF.Controllers
 
 
         }
+        
+        /*
+        public JsonResult Post([FromBody] BarcodeRequest objBarcodeRequest)
+        {
+            JsonResult jr = new JsonResult();
+            string _res = "";
+            try
+            {
+                _res = "ok";
+                   
+                if (_res == "ok")
+                    jr.Data = "Valid";
+                else
+                    jr.Data = "Not Valid";
+                jr.ContentType = "JSON";
+                jr.ContentEncoding = System.Text.Encoding.UTF8;
+            }
+            catch (Exception ex)
+            {
+                //Common.Controllers.ErrorLogging.FetchErrorData(ex);
+                //Response.Write(ex.Message);
+                jr.Data = "Error";
+            }
+            finally
+            {
 
+            }
+            jr.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
+            return jr;
+        }
+        */
 
         // PUT: api/Barcode/5
         public void Put(int id, [FromBody]string value)
         {
-
         }
 
         // DELETE: api/Barcode/5
@@ -151,9 +183,9 @@ namespace HTML2PDF.Controllers
             {
                 logPath = APIConfiguration.GetLogPath;
                 PDFDirectory = APIConfiguration.GetPDFPath;
-
+                
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
             }

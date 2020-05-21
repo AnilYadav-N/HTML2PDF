@@ -1,0 +1,11 @@
+5/21/2020 5:53:10 PM API Configuration loaded
+5/21/2020 5:53:10 PM BarcodeType:- TXN
+5/21/2020 5:53:10 PM Barcode:- IS20200422,IS20200423,IS20200424,
+5/21/2020 5:53:10 PM CreateBarcode() started
+5/21/2020 5:53:12 PM CreateBarcode() Finished, Total Pages:-1
+5/21/2020 5:53:12 PM Template Name:- D:\Nucleus\GIT\HTML2PDFF\HTML2PDF\\Utilities\HTML\TXN1.html
+5/21/2020 5:53:12 PM Call to CreateHTML2PDF() is to be started
+5/21/2020 5:53:13 PM Call to CreateHTML2PDF() Finished
+5/21/2020 5:53:13 PM Copy file to Big Storage started
+5/21/2020 5:53:25 PMWeb API Request Exception:- The network path was not found.
+

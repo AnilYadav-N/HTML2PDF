@@ -1,0 +1,33 @@
+5/21/2020 6:52:05 PM API Configuration loaded
+5/21/2020 6:52:05 PM BarcodeType:- TXN
+5/21/2020 6:52:05 PM Barcode:- IS20200422,IS20200423,IS20200424,
+5/21/2020 6:52:05 PM CreateBarcode() started
+5/21/2020 6:52:08 PM CreateBarcode() Finished, Total Pages:-1
+5/21/2020 6:52:08 PM Template Name:- D:\Nucleus\GIT\HTML2PDFF\HTML2PDF\\Utilities\HTML\TXN1.html
+5/21/2020 6:52:08 PM Call to CreateHTML2PDF() is to be started
+5/21/2020 6:52:08 PM Call to CreateHTML2PDF() Finished
+5/21/2020 6:52:14 PM Copy file to Big Storage started
+5/21/2020 6:52:33 PMWeb API Request Exception:- The network path was not found.
+
+5/21/2020 6:53:45 PM API Configuration loaded
+5/21/2020 6:53:45 PM BarcodeType:- CIF
+5/21/2020 6:53:45 PM Barcode:- 20070401022
+5/21/2020 6:53:45 PM CreateBarcode() started
+5/21/2020 6:53:47 PM CreateBarcode() Finished, Total Pages:-0
+5/21/2020 6:53:47 PM Template Name:- D:\Nucleus\GIT\HTML2PDFF\HTML2PDF\\Utilities\HTML\CIF.html
+5/21/2020 6:53:47 PM Call to CreateHTML2PDF() is to be started
+5/21/2020 6:53:47 PM Call to CreateHTML2PDF() Finished
+5/21/2020 6:53:48 PM Copy file to Big Storage started
+5/21/2020 6:53:51 PMWeb API Request Exception:- The network path was not found.
+
+5/21/2020 6:56:06 PM API Configuration loaded
+5/21/2020 6:56:06 PM BarcodeType:- CIF
+5/21/2020 6:56:06 PM Barcode:- BE20070401022
+5/21/2020 6:56:06 PM CreateBarcode() started
+5/21/2020 6:56:07 PM CreateBarcode() Finished, Total Pages:-0
+5/21/2020 6:56:07 PM Template Name:- D:\Nucleus\GIT\HTML2PDFF\HTML2PDF\\Utilities\HTML\CIF.html
+5/21/2020 6:56:07 PM Call to CreateHTML2PDF() is to be started
+5/21/2020 6:56:08 PM Call to CreateHTML2PDF() Finished
+5/21/2020 6:56:08 PM Copy file to Big Storage started
+5/21/2020 6:56:19 PMWeb API Request Exception:- The network path was not found.
+

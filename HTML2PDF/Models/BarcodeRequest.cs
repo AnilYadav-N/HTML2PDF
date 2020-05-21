@@ -1,8 +1,13 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.Drawing;
+using System.Collections.Generic;
 using System.Linq;
+using System.Web;
+using System.ComponentModel.DataAnnotations;
+
 using ZXing;
+using System.IO;
+using System.Drawing;
+using System.Linq.Expressions;
 
 namespace HTML2PDF.Models
 {
@@ -29,57 +34,16 @@ namespace HTML2PDF.Models
             return isValid;
         }
 
-        public int CreateBarcode(string strBarcode)
-        {
-
-            //initiate BarcodeWriter
-            var barcodeWriter = new BarcodeWriter();
-            //set barcode format
-            barcodeWriter.Format = BarcodeFormat.CODE_128;
-            int PageNo = 0;
-            string imagefile = null;
-
-            imagefile = AppDomain.CurrentDomain.BaseDirectory + @"\Utilities\HTML\Barcodes\barcode-";
-
-            // Taking a string 
-            String str = strBarcode;
-
-            char[] spearator = { ',' };
-
-            String[] strlist = str.Split(spearator, StringSplitOptions.None);
-            int totalBarcode = strlist.Count() - 1;// removed last comma ,
-            PageNo = totalBarcode;
-
-            int i = 1;
-            //to create barcode images in template
-            foreach (String s in strlist)
-            {
-                if (string.IsNullOrWhiteSpace(s))
-                {
-                    //do nothing
-                }
-                else
-                {
-                    barcodeWriter
-                    .Write(s)
-                    .Save(imagefile + i + ".bmp");
-
-                    i = i + 33;
-                }
-            }
-
-            return PageNo;
-        }
         public int CreateBarcode(string strBarcode, string strBarcodeHeader)
         {
             //initiate BarcodeWriter
-            var barcodeWriter = new BarcodeWriter();
-            //set barcode format
-            barcodeWriter.Format = BarcodeFormat.CODE_128;
+            var barcodeWriter = new BarcodeWriter
+            {
+                //set barcode format
+                Format = BarcodeFormat.CODE_128
+            };
             int PageNo = 0;
-            string imagefile = null;
-
-            imagefile = AppDomain.CurrentDomain.BaseDirectory + @"\Utilities\HTML\Barcodes\barcode-";
+            string imagefile = AppDomain.CurrentDomain.BaseDirectory + @"\Utilities\HTML\Barcodes\barcode-";
 
             if (BarcodeType.ToUpper() == "TXN")
             {
@@ -90,8 +54,8 @@ namespace HTML2PDF.Models
 
                 String[] strlist = str.Split(spearator, StringSplitOptions.None);
                 int totalBarcode = strlist.Count() - 1;// removed last comma ,
-                int mod = totalBarcode % 33;
-                if (mod == 0)
+
+                if (totalBarcode % 33 == 0)/*Get MOD*/
                 {
                     PageNo = totalBarcode / 33;
                 }
@@ -102,13 +66,8 @@ namespace HTML2PDF.Models
                 //to create barcode images in template
                 foreach (String s in strlist)
                 {
-                    if (string.IsNullOrWhiteSpace(s))
+                    if (!string.IsNullOrWhiteSpace(s))
                     {
-                        //do nothing
-                    }
-                    else
-                    {
-
                         barcodeWriter
                         .Write(s)
                         .Save(imagefile + i + ".bmp");
@@ -127,7 +86,6 @@ namespace HTML2PDF.Models
                 barcodeWriter
                 .Write(strBarcode)
                 .Save(imagefile + "EOS.bmp");
-
             }
             else if (BarcodeType.ToUpper() == "DOC" || BarcodeType.ToUpper() == "APP")
             {
@@ -145,20 +103,7 @@ namespace HTML2PDF.Models
 
                 // Taking a string 
                 String strCIFInfo = CIFInformation;
-
-                char[] spearator = { '#' };
-
-                String[] strCIFlist = strCIFInfo.Split(spearator, StringSplitOptions.None);
-
-                int i = 1;
-                //to create barcode images in template
-                foreach (String s in strCIFlist)
-                {
-                    CreateHeaderFile(s, imagefile + "CIF" + i + ".bmp");
-                    i++;
-                }
-
-
+                CreateCIFBarcode(strCIFInfo,imagefile);
             }
 
             return PageNo;
@@ -200,6 +145,27 @@ namespace HTML2PDF.Models
             return strfile;
 
 
+        }
+        protected void CreateCIFBarcode(String strCIFInfo, string imagefile)
+        {
+            try
+            {
+                char[] spearator = { '#' };
+                String[] strCIFlist = strCIFInfo.Split(spearator, StringSplitOptions.None);
+
+                int i = 1;
+                //to create barcode images in template
+                foreach (String s in strCIFlist)
+                {
+                    CreateHeaderFile(s, imagefile + "CIF" + i + ".bmp");
+                    i++;
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

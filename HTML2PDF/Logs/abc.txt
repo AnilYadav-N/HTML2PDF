@@ -1,3 +1,32 @@
 Before Process for PDF generation
 wkhtmltopdf path isD:\Nucleus\GIT\HTML2PDFF\HTML2PDF\utilities\PDF\wkhtmltopdf.exe
 Before Process.start() for PDF generation
+PDF generation exit code: 0
+Before Process for PDF generation
+wkhtmltopdf path isD:\Nucleus\GIT\HTML2PDFF\HTML2PDF\utilities\PDF\wkhtmltopdf.exe
+Before Process.start() for PDF generation
+PDF generation exit code: 0
+Before Process for PDF generation
+wkhtmltopdf path isD:\Nucleus\GIT\HTML2PDFF\HTML2PDF\utilities\PDF\wkhtmltopdf.exe
+Before Process.start() for PDF generation
+PDF generation exit code: 0
+Before Process for PDF generation
+wkhtmltopdf path isD:\Nucleus\GIT\HTML2PDFF\HTML2PDF\utilities\PDF\wkhtmltopdf.exe
+Before Process.start() for PDF generation
+PDF generation exit code: 0
+Before Process for PDF generation
+wkhtmltopdf path isD:\Nucleus\GIT\HTML2PDFF\HTML2PDF\utilities\PDF\wkhtmltopdf.exe
+Before Process.start() for PDF generation
+PDF generation exit code: 0
+Before Process for PDF generation
+wkhtmltopdf path isD:\Nucleus\GIT\HTML2PDFF\HTML2PDF\utilities\PDF\wkhtmltopdf.exe
+Before Process.start() for PDF generation
+PDF generation exit code: 0
+Before Process for PDF generation
+wkhtmltopdf path isD:\Nucleus\GIT\HTML2PDFF\HTML2PDF\utilities\PDF\wkhtmltopdf.exe
+Before Process.start() for PDF generation
+PDF generation exit code: 0
+Before Process for PDF generation
+wkhtmltopdf path isD:\Nucleus\GIT\HTML2PDFF\HTML2PDF\utilities\PDF\wkhtmltopdf.exe
+Before Process.start() for PDF generation
+PDF generation exit code: 0

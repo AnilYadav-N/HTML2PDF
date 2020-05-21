@@ -1,8 +1,12 @@
-﻿using HTML2PDF.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Web.Http;
+
+using System.IO;
+using HTML2PDF.Models;
 
 namespace HTML2PDF.Controllers
 {
@@ -27,10 +31,10 @@ namespace HTML2PDF.Controllers
         //}
 
         // POST: api/PDF
-
+        
         public string Post([FromBody]PDFRequest objPDFRequest)
         {
-
+                        
             if (objPDFRequest == null)
             {
                 return "Web API Request Exception:- Bad Request";
@@ -43,10 +47,10 @@ namespace HTML2PDF.Controllers
                 {
                     return "Web API Request Exception:- Bad Request(Invalid)";
                 }
-
+                
                 HTML2PDF obj = new HTML2PDF();
                 string strHTMLURL = objPDFRequest.HTMLURL;
-                string fileName = obj.CreateHTML2PDF(strHTMLURL, objPDFRequest.HTMLContents, objPDFRequest.PageSize);
+                string fileName = obj.CreateHTML2PDF(strHTMLURL,objPDFRequest.HTMLContents, objPDFRequest.PageSize);
 
                 if (!string.IsNullOrEmpty(fileName))
                 {
@@ -74,16 +78,16 @@ namespace HTML2PDF.Controllers
                         // File.Delete(file);
                     }
                 }
-
+                
                 return strResult;
             }
             catch (Exception ex)
             {
-                return "Web API Request Exception:- " + ex.Message;
+               return "Web API Request Exception:- " + ex.Message;
             }
 
         }
-
+        
         // PUT: api/PDF/5
         public void Put(int id, [FromBody]string value)
         {

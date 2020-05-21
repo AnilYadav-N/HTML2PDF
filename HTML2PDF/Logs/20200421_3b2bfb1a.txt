@@ -1,0 +1,19 @@
+5/21/2020 7:04:18 PM API Configuration loaded
+5/21/2020 7:04:18 PM BarcodeType:- DOC
+5/21/2020 7:04:18 PM Barcode:- Hanko Document
+5/21/2020 7:04:18 PM CreateBarcode() started
+5/21/2020 7:04:24 PM CreateBarcode() Finished, Total Pages:-0
+5/21/2020 7:04:24 PM Template Name:- D:\Nucleus\GIT\HTML2PDFF\HTML2PDF\\Utilities\HTML\DOC.html
+5/21/2020 7:04:24 PM Call to CreateHTML2PDF() is to be started
+5/21/2020 7:04:25 PM Call to CreateHTML2PDF() Finished
+5/21/2020 7:04:26 PM Copy file to Big Storage started
+5/21/2020 7:04:37 PMWeb API Request Exception:- The network path was not found.
+
+5/21/2020 7:06:40 PM API Configuration loaded
+5/21/2020 7:06:40 PM BarcodeType:- TXN
+5/21/2020 7:06:40 PM Barcode:- IS20200422,IS20200423,IS20200424,
+5/21/2020 7:06:40 PM CreateBarcode() started
+5/21/2020 7:06:41 PM CreateBarcode() Finished, Total Pages:-1
+5/21/2020 7:06:41 PM Template Name:- D:\Nucleus\GIT\HTML2PDFF\HTML2PDF\\Utilities\HTML\TXN1.html
+5/21/2020 7:06:41 PM Call to CreateHTML2PDF() is to be started
+5/21/2020 7:06:41 PM Call to CreateHTML2PDF() Finished

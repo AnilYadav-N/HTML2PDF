@@ -1,83 +1,89 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
 using System.Diagnostics;
 using System.IO;
-using System.Text;
 using System.Web.UI;
+using System.Text;
 
 namespace HTML2PDF
 {
 
 
-    public partial class HTML2PDF : Page
+public partial class Html2Pdf : Page
+{
+    public string CreateHTML2PDF(string strHTMLURL, string strHTMLContents, string strPageSize )
     {
-        public string CreateHTML2PDF(string strHTMLURL, string strHTMLContents, string strPageSize)
-        {
             if (string.IsNullOrEmpty(strHTMLURL) && !string.IsNullOrEmpty(strHTMLContents))
             {
                 strHTMLURL = CreateHTMLFile(strHTMLContents);
             }
-            string strfileNamePDF = WKHtmlToPdf(strHTMLURL);
+           string strfileNamePDF = WKHtmlToPdf(strHTMLURL);
 
             if (!string.IsNullOrEmpty(strfileNamePDF))
             {
-                string file = Server.MapPath("~\\utilities\\GeneratedPDFs\\" + strfileNamePDF);
-
+                //string file = Server.MapPath("~\\utilities\\GeneratedPDFs\\" + strfileNamePDF);
+                //if (File.Exists(file))
+                //    // strfileNamePDF = file;
+                //    File.Copy(file, @"\\SSOST8768\BarcodePDF$\"+ strfileNamePDF);
             }
 
             return strfileNamePDF;
 
-
+            
         }
 
         public string WKHtmlToPdf(string Url)
+    {
+        var p = new Process();
+
+        string switches = "";
+        //switches += "--print-media-type ";
+       // switches += "--margin-top 10mm --margin-bottom 10mm --margin-right 10mm --margin-left 10mm ";
+        switches += "--page-size A4 ";
+        // waits for a javascript redirect it there is one
+        ////switches += "--redirect-delay 100";
+
+        // basically set a filename and prepends a GUID to it to keep it unique
+        string fileName = Guid.NewGuid().ToString() + ".pdf";
+        LogRequestData("","Before Process for PDF generation");
+        string strExecutableName = Server.MapPath("~\\utilities\\PDF\\wkhtmltopdf.exe");
+        var startInfo = new ProcessStartInfo
         {
-            var p = new Process();
+            FileName = Server.MapPath("~\\utilities\\PDF\\wkhtmltopdf.exe"),
+            Arguments = switches + " " + Url + " \"" +
+                                        "../GeneratedPDFs/" + fileName
+                                        + "\"",
+            UseShellExecute = false, // needs to be false in order to redirect output
+            RedirectStandardOutput = true,
+            RedirectStandardError = true,
+            RedirectStandardInput = true, // redirect all 3, as it should be all 3 or none
+            WorkingDirectory = Server.MapPath("~\\utilities\\PDF")
 
-            string switches = "";
-            //switches += "--print-media-type ";
-            // switches += "--margin-top 10mm --margin-bottom 10mm --margin-right 10mm --margin-left 10mm ";
-            switches += "--page-size A4 ";
-            // waits for a javascript redirect it there is one
-            ////switches += "--redirect-delay 100";
+        };
+        LogRequestData("", "wkhtmltopdf path is" + strExecutableName);
+        LogRequestData("", "Before Process.start() for PDF generation");
 
-            // basically set a filename and prepends a GUID to it to keep it unique
-            string fileName = Guid.NewGuid().ToString() + ".pdf";
-            LogRequestData("", "Before Process for PDF generation");
-            string strExecutableName = Server.MapPath("~\\utilities\\PDF\\wkhtmltopdf.exe");
-            var startInfo = new ProcessStartInfo
-            {
-                FileName = Server.MapPath("~\\utilities\\PDF\\wkhtmltopdf.exe"),
-                Arguments = switches + " " + Url + " \"" +
-                                            "../GeneratedPDFs/" + fileName
-                                            + "\"",
-                UseShellExecute = false, // needs to be false in order to redirect output
-                RedirectStandardOutput = true,
-                RedirectStandardError = true,
-                RedirectStandardInput = true, // redirect all 3, as it should be all 3 or none
-                WorkingDirectory = Server.MapPath("~\\utilities\\PDF")
-
-            };
-            LogRequestData("", "wkhtmltopdf path is" + strExecutableName);
-            LogRequestData("", "Before Process.start() for PDF generation");
-
-            p.StartInfo = startInfo;
-            p.Start();
+        p.StartInfo = startInfo;
+        p.Start();
 
 
-            // doesn't work correctly...
-            // read the output here...
-            // string output = p.StandardOutput.ReadToEnd();
+        // doesn't work correctly...
+        // read the output here...
+        // string output = p.StandardOutput.ReadToEnd();
 
-            //  wait n milliseconds for exit (as after exit, it can't read the output)
-            p.WaitForExit(60000);
+        //  wait n milliseconds for exit (as after exit, it can't read the output)
+        p.WaitForExit(60000);
 
-            // read the exit code, close process
-            int returnCode = p.ExitCode;
-            p.Close();
-            LogRequestData("", "PDF generation exit code: " + returnCode);
-            // if 0, it worked
-            return (returnCode == 0) ? fileName : null;
-        }
+        // read the exit code, close process
+        int returnCode = p.ExitCode;
+        p.Close();
+        LogRequestData("","PDF generation exit code: "+ returnCode);
+        // if 0, it worked
+        return (returnCode == 0) ? fileName : null;
+    }
 
         public static void LogRequestData(string LogName, string strMessage)
         {
@@ -95,8 +101,7 @@ namespace HTML2PDF
         /// </summary>
         /// <param name="strHTMLContents"></param>
         /// <returns></returns>
-        protected string CreateHTMLFile(string strHTMLContents)
-        {
+        protected string CreateHTMLFile(string strHTMLContents) {
 
             string strHTMLfile = Server.MapPath("~\\utilities\\HTML\\" + Guid.NewGuid().ToString() + ".html");
 
@@ -121,9 +126,10 @@ namespace HTML2PDF
                 }
             }
 
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw;
+                //Console.WriteLine(ex.ToString());
+                //throw;
             }
 
             return strHTMLfile;

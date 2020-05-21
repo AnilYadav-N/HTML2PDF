@@ -1,4 +1,9 @@
-﻿namespace HTML2PDF.Models
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace HTML2PDF.Models
 {
     public class ApiResponse
     {
@@ -6,7 +11,7 @@
 
         public string ResultFilePath { get; set; }
 
-
+        //public APIResponseMessage Error { get; set; }
     }
 
     public class ApiResponseMessage

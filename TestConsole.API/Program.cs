@@ -33,7 +33,7 @@ namespace TestConsole.API
             strRequestJSON = @"{""BarcodeString"":""IS20200422,IS20200423,IS20200424,"",""BarcodeType"":""TXN"",""BarcodePerPage"":""1""}";
 
             // strRequestJSON = @"{""BarcodeString"":""Hanko Document"",""BarcodeType"":""DOC"",""NoOfBarcodes"":""}";
-            // strRequestJSON = @"{""BarcodeString"":""20070401022"",""BarcodeType"":""CIF"",""NoOfBarcodes"":"""",""CIFInformation"":""BinderNo#BinderSubject#CIFName#CIFNameJP#CIFNo""}";
+             //strRequestJSON = @"{""BarcodeString"":""BE20070401022"",""BarcodeType"":""CIF"",""NoOfBarcodes"":"""",""CIFInformation"":""20200520#Test Subject#Shinsei Taro#Shinsei Taro JP#800029112""}";
 
             webResponse("", URL, strRequestJSON);
 
